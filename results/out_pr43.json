@@ -1,0 +1,1169 @@
+{
+  "cases": [
+    {
+      "execution": {
+        "gas_used": 26002,
+        "result": "Success { reason: SelfDestruct, gas: ResultGas { total_gas_spent: 26002, state_gas_spent: 0, refunded: 0, floor_gas: 21000 }, logs: [], output: Call(0x) }",
+        "success": true
+      },
+      "geth_call_frame": {
+        "calls": [
+          {
+            "from": "0x000000000000000000000000000000000000de57",
+            "gas": "0x0",
+            "gasUsed": "0x0",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "type": "SELFDESTRUCT",
+            "value": "0x3e8"
+          }
+        ],
+        "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+        "gas": "0x2bb38",
+        "gasUsed": "0x6592",
+        "input": "0x",
+        "to": "0x000000000000000000000000000000000000de57",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "geth_run_state_matches_parity_run": true,
+      "id": "T1_fixture_selfdestruct_self",
+      "note": "mined-probes block 4 selfdestruct-self: Prague, pre-existing contract, beneficiary = self",
+      "parity_traces": [
+        {
+          "action": {
+            "callType": "call",
+            "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+            "gas": "0x2bb38",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "value": "0x0"
+          },
+          "result": {
+            "gasUsed": "0x138a",
+            "output": "0x"
+          },
+          "subtraces": 1,
+          "traceAddress": [],
+          "type": "call"
+        },
+        {
+          "action": {
+            "address": "0x000000000000000000000000000000000000de57",
+            "balance": "0x3e8",
+            "refundAddress": "0x000000000000000000000000000000000000de57"
+          },
+          "result": null,
+          "subtraces": 0,
+          "traceAddress": [
+            0
+          ],
+          "type": "suicide"
+        }
+      ],
+      "post_state": [
+        {
+          "address": "0x0000000000000000000000000000000000000000",
+          "balance": "0x0",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 0,
+          "status": "AccountStatus(Touched | LoadedAsNotExisting)",
+          "storage": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000de57",
+          "balance": "0x3e8",
+          "code_hash": "0x1350878883579ac28a3eb26119b4fab92667b38ad96491cba735ccef23adbe7c",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        },
+        {
+          "address": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+          "balance": "0xde0b6b3a7640000",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        }
+      ],
+      "spec": "PRAGUE",
+      "trace_filter": {
+        "from=[0x000000000000000000000000000000000000de57]": [
+          [
+            [
+              0
+            ],
+            "suicide"
+          ]
+        ],
+        "to=[0x000000000000000000000000000000000000de57]": [
+          [
+            [],
+            "call"
+          ],
+          [
+            [
+              0
+            ],
+            "suicide"
+          ]
+        ]
+      }
+    },
+    {
+      "execution": {
+        "gas_used": 26002,
+        "result": "Success { reason: SelfDestruct, gas: ResultGas { total_gas_spent: 26002, state_gas_spent: 0, refunded: 0, floor_gas: 21000 }, logs: [], output: Call(0x) }",
+        "success": true
+      },
+      "geth_call_frame": {
+        "calls": [
+          {
+            "from": "0x000000000000000000000000000000000000de57",
+            "gas": "0x0",
+            "gasUsed": "0x0",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "type": "SELFDESTRUCT",
+            "value": "0x5b3"
+          }
+        ],
+        "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+        "gas": "0x2bb38",
+        "gasUsed": "0x6592",
+        "input": "0x",
+        "to": "0x000000000000000000000000000000000000de57",
+        "type": "CALL",
+        "value": "0x1cb"
+      },
+      "geth_run_state_matches_parity_run": true,
+      "id": "T2_selfdestruct_self_with_tx_value",
+      "note": "same as T1 with 459 wei sent by the tx (pre-opcode balance 1459)",
+      "parity_traces": [
+        {
+          "action": {
+            "callType": "call",
+            "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+            "gas": "0x2bb38",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "value": "0x1cb"
+          },
+          "result": {
+            "gasUsed": "0x138a",
+            "output": "0x"
+          },
+          "subtraces": 1,
+          "traceAddress": [],
+          "type": "call"
+        },
+        {
+          "action": {
+            "address": "0x000000000000000000000000000000000000de57",
+            "balance": "0x5b3",
+            "refundAddress": "0x000000000000000000000000000000000000de57"
+          },
+          "result": null,
+          "subtraces": 0,
+          "traceAddress": [
+            0
+          ],
+          "type": "suicide"
+        }
+      ],
+      "post_state": [
+        {
+          "address": "0x0000000000000000000000000000000000000000",
+          "balance": "0x0",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 0,
+          "status": "AccountStatus(Touched | LoadedAsNotExisting)",
+          "storage": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000de57",
+          "balance": "0x5b3",
+          "code_hash": "0x1350878883579ac28a3eb26119b4fab92667b38ad96491cba735ccef23adbe7c",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        },
+        {
+          "address": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+          "balance": "0xde0b6b3a763fe35",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        }
+      ],
+      "spec": "PRAGUE",
+      "trace_filter": {
+        "from=[0x000000000000000000000000000000000000de57]": [
+          [
+            [
+              0
+            ],
+            "suicide"
+          ]
+        ],
+        "to=[0x000000000000000000000000000000000000de57]": [
+          [
+            [],
+            "call"
+          ],
+          [
+            [
+              0
+            ],
+            "suicide"
+          ]
+        ]
+      }
+    },
+    {
+      "execution": {
+        "gas_used": 53603,
+        "result": "Success { reason: SelfDestruct, gas: ResultGas { total_gas_spent: 53603, state_gas_spent: 0, refunded: 0, floor_gas: 21000 }, logs: [], output: Call(0x) }",
+        "success": true
+      },
+      "geth_call_frame": {
+        "calls": [
+          {
+            "from": "0x000000000000000000000000000000000000de57",
+            "gas": "0x0",
+            "gasUsed": "0x0",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000beef",
+            "type": "SELFDESTRUCT",
+            "value": "0x3e8"
+          }
+        ],
+        "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+        "gas": "0x2bb38",
+        "gasUsed": "0xd163",
+        "input": "0x",
+        "to": "0x000000000000000000000000000000000000de57",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "geth_run_state_matches_parity_run": true,
+      "id": "C1_prague_other_beneficiary",
+      "note": "control: Prague, pre-existing contract, beneficiary != self (BalanceTransfer journal entry)",
+      "parity_traces": [
+        {
+          "action": {
+            "callType": "call",
+            "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+            "gas": "0x2bb38",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "value": "0x0"
+          },
+          "result": {
+            "gasUsed": "0x7f5b",
+            "output": "0x"
+          },
+          "subtraces": 1,
+          "traceAddress": [],
+          "type": "call"
+        },
+        {
+          "action": {
+            "address": "0x000000000000000000000000000000000000de57",
+            "balance": "0x3e8",
+            "refundAddress": "0x000000000000000000000000000000000000beef"
+          },
+          "result": null,
+          "subtraces": 0,
+          "traceAddress": [
+            0
+          ],
+          "type": "suicide"
+        }
+      ],
+      "post_state": [
+        {
+          "address": "0x0000000000000000000000000000000000000000",
+          "balance": "0x0",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 0,
+          "status": "AccountStatus(Touched | LoadedAsNotExisting)",
+          "storage": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000beef",
+          "balance": "0x3e8",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 0,
+          "status": "AccountStatus(Touched | LoadedAsNotExisting)",
+          "storage": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000de57",
+          "balance": "0x0",
+          "code_hash": "0x57198570c20b3d258434ce928e54d40a494adb99d3e515c89ae8f9a571d15ef2",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        },
+        {
+          "address": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+          "balance": "0xde0b6b3a7640000",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        }
+      ],
+      "spec": "PRAGUE",
+      "trace_filter": {
+        "from=[0x000000000000000000000000000000000000de57]": [
+          [
+            [
+              0
+            ],
+            "suicide"
+          ]
+        ],
+        "to=[0x000000000000000000000000000000000000de57]": [
+          [
+            [],
+            "call"
+          ]
+        ]
+      }
+    },
+    {
+      "execution": {
+        "gas_used": 26002,
+        "result": "Success { reason: SelfDestruct, gas: ResultGas { total_gas_spent: 26002, state_gas_spent: 0, refunded: 0, floor_gas: 0 }, logs: [], output: Call(0x) }",
+        "success": true
+      },
+      "geth_call_frame": {
+        "calls": [
+          {
+            "from": "0x000000000000000000000000000000000000de57",
+            "gas": "0x0",
+            "gasUsed": "0x0",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "type": "SELFDESTRUCT",
+            "value": "0x3e8"
+          }
+        ],
+        "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+        "gas": "0x2bb38",
+        "gasUsed": "0x6592",
+        "input": "0x",
+        "to": "0x000000000000000000000000000000000000de57",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "geth_run_state_matches_parity_run": true,
+      "id": "C2_shanghai_selfdestruct_self",
+      "note": "control: pre-Cancun, beneficiary = self (AccountDestroyed journal entry)",
+      "parity_traces": [
+        {
+          "action": {
+            "callType": "call",
+            "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+            "gas": "0x2bb38",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "value": "0x0"
+          },
+          "result": {
+            "gasUsed": "0x138a",
+            "output": "0x"
+          },
+          "subtraces": 1,
+          "traceAddress": [],
+          "type": "call"
+        },
+        {
+          "action": {
+            "address": "0x000000000000000000000000000000000000de57",
+            "balance": "0x3e8",
+            "refundAddress": "0x000000000000000000000000000000000000de57"
+          },
+          "result": null,
+          "subtraces": 0,
+          "traceAddress": [
+            0
+          ],
+          "type": "suicide"
+        }
+      ],
+      "post_state": [
+        {
+          "address": "0x0000000000000000000000000000000000000000",
+          "balance": "0x0",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 0,
+          "status": "AccountStatus(Touched | LoadedAsNotExisting)",
+          "storage": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000de57",
+          "balance": "0x0",
+          "code_hash": "0x1350878883579ac28a3eb26119b4fab92667b38ad96491cba735ccef23adbe7c",
+          "nonce": 1,
+          "status": "AccountStatus(SelfDestructed | SelfDestructedLocal | Touched)",
+          "storage": []
+        },
+        {
+          "address": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+          "balance": "0xde0b6b3a7640000",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        }
+      ],
+      "spec": "SHANGHAI",
+      "trace_filter": {
+        "from=[0x000000000000000000000000000000000000de57]": [
+          [
+            [
+              0
+            ],
+            "suicide"
+          ]
+        ],
+        "to=[0x000000000000000000000000000000000000de57]": [
+          [
+            [],
+            "call"
+          ],
+          [
+            [
+              0
+            ],
+            "suicide"
+          ]
+        ]
+      }
+    },
+    {
+      "execution": {
+        "gas_used": 58024,
+        "result": "Success { reason: Stop, gas: ResultGas { total_gas_spent: 58024, state_gas_spent: 0, refunded: 0, floor_gas: 21000 }, logs: [], output: Call(0x) }",
+        "success": true
+      },
+      "geth_call_frame": {
+        "calls": [
+          {
+            "calls": [
+              {
+                "from": "0xd8353791c13be48589d7247c3284625edca5aa72",
+                "gas": "0x0",
+                "gasUsed": "0x0",
+                "input": "0x",
+                "to": "0xd8353791c13be48589d7247c3284625edca5aa72",
+                "type": "SELFDESTRUCT",
+                "value": "0x100"
+              }
+            ],
+            "from": "0x000000000000000000000000000000000000fac0",
+            "gas": "0x2352a",
+            "gasUsed": "0x138a",
+            "input": "0x30ff",
+            "to": "0xd8353791c13be48589d7247c3284625edca5aa72",
+            "type": "CREATE",
+            "value": "0x100"
+          }
+        ],
+        "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+        "gas": "0x2bb38",
+        "gasUsed": "0xe2a8",
+        "input": "0x",
+        "to": "0x000000000000000000000000000000000000fac0",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "geth_run_state_matches_parity_run": true,
+      "id": "C3_prague_create_and_destroy_same_tx",
+      "note": "control: factory CREATEs initcode 30ff with 256 wei (created in same tx -> AccountDestroyed)",
+      "parity_traces": [
+        {
+          "action": {
+            "callType": "call",
+            "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+            "gas": "0x2bb38",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000fac0",
+            "value": "0x0"
+          },
+          "result": {
+            "gasUsed": "0x90a0",
+            "output": "0x"
+          },
+          "subtraces": 1,
+          "traceAddress": [],
+          "type": "call"
+        },
+        {
+          "action": {
+            "creationMethod": "create",
+            "from": "0x000000000000000000000000000000000000fac0",
+            "gas": "0x2352a",
+            "init": "0x30ff",
+            "value": "0x100"
+          },
+          "result": {
+            "address": "0xd8353791c13be48589d7247c3284625edca5aa72",
+            "code": "0x",
+            "gasUsed": "0x138a"
+          },
+          "subtraces": 1,
+          "traceAddress": [
+            0
+          ],
+          "type": "create"
+        },
+        {
+          "action": {
+            "address": "0xd8353791c13be48589d7247c3284625edca5aa72",
+            "balance": "0x100",
+            "refundAddress": "0xd8353791c13be48589d7247c3284625edca5aa72"
+          },
+          "result": null,
+          "subtraces": 0,
+          "traceAddress": [
+            0,
+            0
+          ],
+          "type": "suicide"
+        }
+      ],
+      "post_state": [
+        {
+          "address": "0x0000000000000000000000000000000000000000",
+          "balance": "0x0",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 0,
+          "status": "AccountStatus(Touched | LoadedAsNotExisting)",
+          "storage": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000fac0",
+          "balance": "0x2e8",
+          "code_hash": "0x6ff8ebcced179528011901c823a720258605c03ae90dbb1671bf8a60a76d1b1d",
+          "nonce": 2,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        },
+        {
+          "address": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+          "balance": "0xde0b6b3a7640000",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        },
+        {
+          "address": "0xd8353791c13be48589d7247c3284625edca5aa72",
+          "balance": "0x0",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 1,
+          "status": "AccountStatus(Created | CreatedLocal | SelfDestructed | SelfDestructedLocal | Touched | LoadedAsNotExisting)",
+          "storage": []
+        }
+      ],
+      "spec": "PRAGUE",
+      "trace_filter": {
+        "from=[0x000000000000000000000000000000000000fAc0]": [
+          [
+            [
+              0
+            ],
+            "create"
+          ]
+        ],
+        "to=[0x000000000000000000000000000000000000fAc0]": [
+          [
+            [],
+            "call"
+          ]
+        ]
+      }
+    },
+    {
+      "execution": {
+        "gas_used": 89151,
+        "result": "Success { reason: Stop, gas: ResultGas { total_gas_spent: 89151, state_gas_spent: 0, refunded: 0, floor_gas: 21000 }, logs: [], output: Call(0x) }",
+        "success": true
+      },
+      "geth_call_frame": {
+        "calls": [
+          {
+            "error": "write protection",
+            "from": "0x00000000000000000000000000000000000000a1",
+            "gas": "0xffff",
+            "gasUsed": "0xffff",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "type": "STATICCALL"
+          }
+        ],
+        "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+        "gas": "0x2bb38",
+        "gasUsed": "0x15c3f",
+        "input": "0x",
+        "to": "0x00000000000000000000000000000000000000a1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "geth_run_state_matches_parity_run": true,
+      "id": "C4_prague_staticcall_into_selfdestruct",
+      "note": "control: SELFDESTRUCT inside STATICCALL must fail and emit no suicide record",
+      "parity_traces": [
+        {
+          "action": {
+            "callType": "call",
+            "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+            "gas": "0x2bb38",
+            "input": "0x",
+            "to": "0x00000000000000000000000000000000000000a1",
+            "value": "0x0"
+          },
+          "result": {
+            "gasUsed": "0x10a37",
+            "output": "0x"
+          },
+          "subtraces": 1,
+          "traceAddress": [],
+          "type": "call"
+        },
+        {
+          "action": {
+            "callType": "staticcall",
+            "from": "0x00000000000000000000000000000000000000a1",
+            "gas": "0xffff",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "value": "0x0"
+          },
+          "error": "Mutable Call In Static Context",
+          "result": null,
+          "subtraces": 0,
+          "traceAddress": [
+            0
+          ],
+          "type": "call"
+        }
+      ],
+      "post_state": [
+        {
+          "address": "0x0000000000000000000000000000000000000000",
+          "balance": "0x0",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 0,
+          "status": "AccountStatus(Touched | LoadedAsNotExisting)",
+          "storage": []
+        },
+        {
+          "address": "0x00000000000000000000000000000000000000a1",
+          "balance": "0x0",
+          "code_hash": "0xde498d5f8b15f0bd825a5aad883bc13f2f7db88e76110ecc04bc5899e7297566",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000de57",
+          "balance": "0x3e8",
+          "code_hash": "0x1350878883579ac28a3eb26119b4fab92667b38ad96491cba735ccef23adbe7c",
+          "nonce": 1,
+          "status": "AccountStatus(0x0)",
+          "storage": []
+        },
+        {
+          "address": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+          "balance": "0xde0b6b3a7640000",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        }
+      ],
+      "spec": "PRAGUE",
+      "trace_filter": {
+        "from=[0x00000000000000000000000000000000000000A1]": [
+          [
+            [
+              0
+            ],
+            "call"
+          ]
+        ],
+        "from=[0x000000000000000000000000000000000000de57]": [],
+        "to=[0x00000000000000000000000000000000000000A1]": [
+          [
+            [],
+            "call"
+          ]
+        ],
+        "to=[0x000000000000000000000000000000000000de57]": [
+          [
+            [
+              0
+            ],
+            "call"
+          ]
+        ]
+      }
+    },
+    {
+      "execution": {
+        "gas_used": 28624,
+        "result": "Revert { gas: ResultGas { total_gas_spent: 28624, state_gas_spent: 0, refunded: 0, floor_gas: 21000 }, logs: [], output: 0x }",
+        "success": false
+      },
+      "geth_call_frame": {
+        "calls": [
+          {
+            "calls": [
+              {
+                "from": "0x000000000000000000000000000000000000de57",
+                "gas": "0x0",
+                "gasUsed": "0x0",
+                "input": "0x",
+                "to": "0x000000000000000000000000000000000000de57",
+                "type": "SELFDESTRUCT",
+                "value": "0x3e8"
+              }
+            ],
+            "from": "0x00000000000000000000000000000000000000a1",
+            "gas": "0xffff",
+            "gasUsed": "0x138a",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "type": "CALL",
+            "value": "0x0"
+          }
+        ],
+        "error": "execution reverted",
+        "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+        "gas": "0x2bb38",
+        "gasUsed": "0x6fd0",
+        "input": "0x",
+        "to": "0x00000000000000000000000000000000000000a1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "geth_run_state_matches_parity_run": true,
+      "id": "C5_prague_outer_revert",
+      "note": "child selfdestructs to self successfully, then the parent REVERTs",
+      "parity_traces": [
+        {
+          "action": {
+            "callType": "call",
+            "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+            "gas": "0x2bb38",
+            "input": "0x",
+            "to": "0x00000000000000000000000000000000000000a1",
+            "value": "0x0"
+          },
+          "error": "Reverted",
+          "result": {
+            "gasUsed": "0x1dc8",
+            "output": "0x"
+          },
+          "subtraces": 1,
+          "traceAddress": [],
+          "type": "call"
+        },
+        {
+          "action": {
+            "callType": "call",
+            "from": "0x00000000000000000000000000000000000000a1",
+            "gas": "0xffff",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "value": "0x0"
+          },
+          "result": {
+            "gasUsed": "0x138a",
+            "output": "0x"
+          },
+          "subtraces": 1,
+          "traceAddress": [
+            0
+          ],
+          "type": "call"
+        },
+        {
+          "action": {
+            "address": "0x000000000000000000000000000000000000de57",
+            "balance": "0x3e8",
+            "refundAddress": "0x000000000000000000000000000000000000de57"
+          },
+          "result": null,
+          "subtraces": 0,
+          "traceAddress": [
+            0,
+            0
+          ],
+          "type": "suicide"
+        }
+      ],
+      "post_state": [
+        {
+          "address": "0x0000000000000000000000000000000000000000",
+          "balance": "0x0",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 0,
+          "status": "AccountStatus(Touched | LoadedAsNotExisting)",
+          "storage": []
+        },
+        {
+          "address": "0x00000000000000000000000000000000000000a1",
+          "balance": "0x0",
+          "code_hash": "0xb5324e2caa5b9c0b86ccdd7c976fe532b9afcc40aaf80a22cf8d0a97f9eae5dd",
+          "nonce": 1,
+          "status": "AccountStatus(0x0)",
+          "storage": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000de57",
+          "balance": "0x3e8",
+          "code_hash": "0x1350878883579ac28a3eb26119b4fab92667b38ad96491cba735ccef23adbe7c",
+          "nonce": 1,
+          "status": "AccountStatus(Cold)",
+          "storage": []
+        },
+        {
+          "address": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+          "balance": "0xde0b6b3a7640000",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        }
+      ],
+      "spec": "PRAGUE",
+      "trace_filter": {
+        "from=[0x00000000000000000000000000000000000000A1]": [
+          [
+            [
+              0
+            ],
+            "call"
+          ]
+        ],
+        "from=[0x000000000000000000000000000000000000de57]": [
+          [
+            [
+              0,
+              0
+            ],
+            "suicide"
+          ]
+        ],
+        "to=[0x00000000000000000000000000000000000000A1]": [
+          [
+            [],
+            "call"
+          ]
+        ],
+        "to=[0x000000000000000000000000000000000000de57]": [
+          [
+            [
+              0
+            ],
+            "call"
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            "suicide"
+          ]
+        ]
+      }
+    },
+    {
+      "execution": {
+        "gas_used": 28616,
+        "result": "Success { reason: Stop, gas: ResultGas { total_gas_spent: 28616, state_gas_spent: 0, refunded: 0, floor_gas: 21000 }, logs: [], output: Call(0x) }",
+        "success": true
+      },
+      "geth_call_frame": {
+        "calls": [
+          {
+            "calls": [
+              {
+                "from": "0x00000000000000000000000000000000000000a1",
+                "gas": "0x0",
+                "gasUsed": "0x0",
+                "input": "0x",
+                "to": "0x00000000000000000000000000000000000000a1",
+                "type": "SELFDESTRUCT",
+                "value": "0x1f4"
+              }
+            ],
+            "from": "0x00000000000000000000000000000000000000a1",
+            "gas": "0xffff",
+            "gasUsed": "0x138a",
+            "input": "0x",
+            "to": "0x0000000000000000000000000000000000001111",
+            "type": "DELEGATECALL",
+            "value": "0x0"
+          }
+        ],
+        "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+        "gas": "0x2bb38",
+        "gasUsed": "0x6fc8",
+        "input": "0x",
+        "to": "0x00000000000000000000000000000000000000a1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "geth_run_state_matches_parity_run": true,
+      "id": "C6_prague_delegatecall_selfdestruct_self",
+      "note": "delegator (500 wei) DELEGATECALLs code 30ff: executing account and beneficiary are the delegator",
+      "parity_traces": [
+        {
+          "action": {
+            "callType": "call",
+            "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+            "gas": "0x2bb38",
+            "input": "0x",
+            "to": "0x00000000000000000000000000000000000000a1",
+            "value": "0x0"
+          },
+          "result": {
+            "gasUsed": "0x1dc0",
+            "output": "0x"
+          },
+          "subtraces": 1,
+          "traceAddress": [],
+          "type": "call"
+        },
+        {
+          "action": {
+            "callType": "delegatecall",
+            "from": "0x00000000000000000000000000000000000000a1",
+            "gas": "0xffff",
+            "input": "0x",
+            "to": "0x0000000000000000000000000000000000001111",
+            "value": "0x0"
+          },
+          "result": {
+            "gasUsed": "0x138a",
+            "output": "0x"
+          },
+          "subtraces": 1,
+          "traceAddress": [
+            0
+          ],
+          "type": "call"
+        },
+        {
+          "action": {
+            "address": "0x00000000000000000000000000000000000000a1",
+            "balance": "0x1f4",
+            "refundAddress": "0x00000000000000000000000000000000000000a1"
+          },
+          "result": null,
+          "subtraces": 0,
+          "traceAddress": [
+            0,
+            0
+          ],
+          "type": "suicide"
+        }
+      ],
+      "post_state": [
+        {
+          "address": "0x0000000000000000000000000000000000000000",
+          "balance": "0x0",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 0,
+          "status": "AccountStatus(Touched | LoadedAsNotExisting)",
+          "storage": []
+        },
+        {
+          "address": "0x00000000000000000000000000000000000000a1",
+          "balance": "0x1f4",
+          "code_hash": "0xb2bd7b4622501e254c356cd8a7f816aa2f0d237458c31f192c9cfe70776fc111",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000001111",
+          "balance": "0x0",
+          "code_hash": "0x1350878883579ac28a3eb26119b4fab92667b38ad96491cba735ccef23adbe7c",
+          "nonce": 1,
+          "status": "AccountStatus(0x0)",
+          "storage": []
+        },
+        {
+          "address": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+          "balance": "0xde0b6b3a7640000",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        }
+      ],
+      "spec": "PRAGUE",
+      "trace_filter": {
+        "from=[0x00000000000000000000000000000000000000A1]": [
+          [
+            [
+              0
+            ],
+            "call"
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            "suicide"
+          ]
+        ],
+        "from=[0x0000000000000000000000000000000000001111]": [],
+        "to=[0x00000000000000000000000000000000000000A1]": [
+          [
+            [],
+            "call"
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            "suicide"
+          ]
+        ],
+        "to=[0x0000000000000000000000000000000000001111]": [
+          [
+            [
+              0
+            ],
+            "call"
+          ]
+        ]
+      }
+    },
+    {
+      "execution": {
+        "gas_used": 26001,
+        "result": "Halt { reason: OutOfGas(Basic), gas: ResultGas { total_gas_spent: 26001, state_gas_spent: 0, refunded: 0, floor_gas: 21000 }, logs: [] }",
+        "success": false
+      },
+      "geth_call_frame": {
+        "error": "out of gas",
+        "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+        "gas": "0x1389",
+        "gasUsed": "0x6591",
+        "input": "0x",
+        "to": "0x000000000000000000000000000000000000de57",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "geth_run_state_matches_parity_run": true,
+      "id": "C7_prague_selfdestruct_out_of_gas",
+      "note": "control: tx gas 26001 leaves 4999 gas at SELFDESTRUCT (needs 5000): no suicide record",
+      "parity_traces": [
+        {
+          "action": {
+            "callType": "call",
+            "from": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+            "gas": "0x1389",
+            "input": "0x",
+            "to": "0x000000000000000000000000000000000000de57",
+            "value": "0x0"
+          },
+          "error": "Out of gas",
+          "result": null,
+          "subtraces": 0,
+          "traceAddress": [],
+          "type": "call"
+        }
+      ],
+      "post_state": [
+        {
+          "address": "0x0000000000000000000000000000000000000000",
+          "balance": "0x0",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 0,
+          "status": "AccountStatus(Touched | LoadedAsNotExisting)",
+          "storage": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000de57",
+          "balance": "0x3e8",
+          "code_hash": "0x1350878883579ac28a3eb26119b4fab92667b38ad96491cba735ccef23adbe7c",
+          "nonce": 1,
+          "status": "AccountStatus(0x0)",
+          "storage": []
+        },
+        {
+          "address": "0x7e5f4552091a69125d5dfcb7b8c2659029395bdf",
+          "balance": "0xde0b6b3a7640000",
+          "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+          "nonce": 1,
+          "status": "AccountStatus(Touched)",
+          "storage": []
+        }
+      ],
+      "spec": "PRAGUE",
+      "trace_filter": {
+        "from=[0x000000000000000000000000000000000000de57]": [],
+        "to=[0x000000000000000000000000000000000000de57]": [
+          [
+            [],
+            "call"
+          ]
+        ]
+      }
+    }
+  ],
+  "t1_fixture_checks": [
+    {
+      "check": "suicide record exists at traceAddress [0]",
+      "pass": true
+    },
+    {
+      "check": "suicide action.address == 0x..de57",
+      "pass": true
+    },
+    {
+      "check": "suicide action.refundAddress == 0x..de57",
+      "pass": true
+    },
+    {
+      "check": "suicide action.balance == 0x3e8",
+      "pass": true
+    },
+    {
+      "check": "trace_filter fromAddress=[de57] -> [([0],suicide)]",
+      "pass": true
+    },
+    {
+      "check": "trace_filter toAddress=[de57] -> [([],call),([0],suicide)]",
+      "pass": true
+    },
+    {
+      "check": "geth SELFDESTRUCT frame from == de57",
+      "pass": true
+    },
+    {
+      "check": "geth SELFDESTRUCT frame to == de57",
+      "pass": true
+    },
+    {
+      "check": "geth SELFDESTRUCT frame value == 0x3e8",
+      "pass": true
+    }
+  ],
+  "variant": "pr43: revm 7e43a49fd9fe57a0f6b8bf9779d62664e92e2418 (main) + cherry-pick 86afe4d3cacc95e8ed30e2ec09a0bf5f41623296 + revm-inspectors 36ae391df0eb59263631763e09c5b629c87a20c7 (main)"
+}

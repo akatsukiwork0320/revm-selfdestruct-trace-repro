@@ -1,0 +1,83 @@
+{
+  "unit": "revm3833-downstream-probe-public",
+  "created_utc": "2026-10-09T21:56:36.724860+00:00",
+  "pins": {
+    "revm_pr_head": "86afe4d3cacc95e8ed30e2ec09a0bf5f41623296",
+    "revm_pr_parent": "640eafa91beae73bafb7776845d53133f603048f",
+    "revm_main": "7e43a49fd9fe57a0f6b8bf9779d62664e92e2418",
+    "revm_inspectors_main": "36ae391df0eb59263631763e09c5b629c87a20c7",
+    "revm_inspectors_v0_42_2": "ef11a664c4de71a51b254ce3ccf6b8353e1cafe0"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 30,
+      "sha256": "65407c57c3f44f0e1df6ba05536ae4b6767d54c34bdb92fe415b86e432df3c85"
+    },
+    {
+      "path": "check.py",
+      "bytes": 19164,
+      "sha256": "a0425b6f910c144ad7c6e65383130000fff7c6cc075b470e0adeabd8335eeb55"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1074,
+      "sha256": "e5101c801de31ba7642fba54588da2da2935df455824a8b73030ffbe6b9edeff"
+    },
+    {
+      "path": "lock/Cargo.lock.42",
+      "bytes": 83913,
+      "sha256": "9de9836d02a4c72a1d2147e2101798af2d59ac165102c2dd69cca2e835f45cd5"
+    },
+    {
+      "path": "lock/Cargo.lock.43",
+      "bytes": 84166,
+      "sha256": "fa68ff8f6e49a44eb38daa734ef2dc1d325686d53770b30aeebb3547e210d276"
+    },
+    {
+      "path": "probe/Cargo.toml.in",
+      "bytes": 498,
+      "sha256": "55860fe42d84efd6ac636c6a5ccd15d1c2aa870eb9b0e82e1a05d481d02c37cd"
+    },
+    {
+      "path": "probe/src/main.rs",
+      "bytes": 13662,
+      "sha256": "1ca3a759cd181f12f074f3c9a42695130ed173d5f7ec58ce58d4c9a5065b5cf2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6133,
+      "sha256": "0561f0d36be5ebd6ec4acec648f83044e2bb195a11047a37a9b0e4acff5a3aef"
+    },
+    {
+      "path": "results/out_base42.json",
+      "bytes": 34397,
+      "sha256": "56a5d8817ea29e68ff35a51c522f519ce65b04ff1070cc4cb29ad69f3a0bf5ce"
+    },
+    {
+      "path": "results/out_base43.json",
+      "bytes": 34381,
+      "sha256": "59c32b28faf30fff3f6a29c7769ff913c2ee7a4195a9dc02a5a8fa103b601a64"
+    },
+    {
+      "path": "results/out_pr42.json",
+      "bytes": 35626,
+      "sha256": "a01008c4680737c25cd2df02223cb551b92ea02f2ab75093ce0e31b806e204c4"
+    },
+    {
+      "path": "results/out_pr43.json",
+      "bytes": 35654,
+      "sha256": "d4deb4c429ca9da46d206e4b9221aea777f620d5090411401426a9ebe906afed"
+    },
+    {
+      "path": "run.sh",
+      "bytes": 5220,
+      "sha256": "589a269f53d50559821834e8297e3c10751d15a2d4066049e2f0c3e79cee7801"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 4158,
+      "sha256": "e2f01faa187add949a6338463538507b770143df611ae1c01500f5353f17413a"
+    }
+  ]
+}
